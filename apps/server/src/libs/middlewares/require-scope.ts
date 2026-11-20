@@ -26,7 +26,7 @@ export function requireGroupScope(
         ? "any"
         : `${group}:${method === "GET" || method === "HEAD" ? "read" : "write"}`;
 
-    if (!matchesScope(apiKey.scopes ?? [], required)) {
+    if (!matchesScope(apiKey.scopes ?? ["*"], required)) {
       throw new HTTPException(403, {
         message: `API key lacks required scope: ${required}`,
       });
