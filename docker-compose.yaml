@@ -120,13 +120,13 @@ services:
             retries: 3
             start_period: 30s
         restart: unless-stopped
-        memswap_limit: 512M
+        memswap_limit: 768M
         deploy:
             resources:
                 limits:
-                    memory: 512M
+                    memory: 768M
                 reservations:
-                    memory: 256M
+                    memory: 384M
 
     server:
         container_name: openstatus-server
