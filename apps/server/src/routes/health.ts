@@ -13,7 +13,7 @@ import { env } from "@/env";
 // Kept at `/ping`: Fly's http check, the Dockerfile healthcheck and the public
 // openstatus monitor all poll it. `deadlineMs` stays under Fly's 5s timeout.
 export const pingRoute = healthRoute<{ Variables: RequestIdVariables }>({
-  path: "/ping",
+  path: "/healthz",
   deadlineMs: 15_000,
   probes: [
     tursoProbe({ client: db.$client }),
