@@ -181,6 +181,7 @@ services:
             - DB_URL=http://libsql:8080
             - TINYBIRD_URL=http://tinybird-local:7181
             - WORKFLOWS_URL=http://workflows:3000
+            # temporary while tuning ingest - revert before tagging a release
             - GIN_MODE=debug
             - PORT=8080
         depends_on:
