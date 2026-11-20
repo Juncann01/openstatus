@@ -32,7 +32,7 @@ export function getCheckerPayload(
 export function getCheckerTimeout(
   monitor: z.infer<typeof selectMonitorSchema>,
 ): number {
-  return (monitor.timeout ?? 45_000) + 15_000;
+  return (monitor.timeout ?? 4_500) + 15_000;
 }
 
 export function getCheckerUrl(
